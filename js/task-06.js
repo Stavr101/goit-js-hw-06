@@ -3,10 +3,10 @@ const inputAttribute = document.querySelector('input');
 const inputLength = Number(inputAttribute.dataset.length);
 
 inputAttribute.onblur = function () {
-  console.log(this.value.length);
+  console.log(this.value.trim().length);
   console.log(inputLength);
 
-  if (inputLength === this.value.length) {
+  if (inputLength === this.value.trim().length) {
     this.classList.remove('invalid');
     this.classList.add('valid');
   } else {
@@ -14,9 +14,6 @@ inputAttribute.onblur = function () {
     this.classList.add('invalid');
   }
 };
-
-console.log(inputAttribute);
-console.log(inputAttribute);
 
 // const inputAttribute = document.querySelector('input');
 
