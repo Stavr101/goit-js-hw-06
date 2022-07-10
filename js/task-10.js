@@ -25,16 +25,22 @@ function createBoxes(amount) {
     i <= amount;
     i += Number(inputNumb.step)
   ) {
-    let boxMarkup = `<div style="width:${boxWidth}px; height:${boxHeight}px; background-color:${getRandomHexColor()}"></div>`;
+    let boxMarkup = `<div class = box style="width:${boxWidth}px; height:${boxHeight}px; background-color:${getRandomHexColor()}"></div>`;
 
     boxWidth += 10;
     boxHeight += 10;
     markupArray.push(boxMarkup);
   }
   boxesMarkup.insertAdjacentHTML('beforeend', markupArray.join(''));
+  return;
 }
+
+createBtn.addEventListener('click', () => createBoxes(inputNumb.value));
+
 destroyBtn.addEventListener('click', () => {
-  boxesMarkup.remove();
+  boxesMarkup.innerHTML = '';
+  boxWidth = 30;
+  boxHeight = 30;
   inputNumb.value = 0;
 });
-createBtn.addEventListener('click', () => createBoxes(inputNumb.value));
+console.log(inputNumb.value);

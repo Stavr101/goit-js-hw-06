@@ -18,7 +18,7 @@ const gallery = document.querySelector('.gallery');
 const imageGallery = images
   .map(
     image =>
-      `<li class="image"><img src='${image.url}' alt = '${image.alt}'></li>`,
+      `<li class="image"><img  src='${image.url}' alt = '${image.alt}'  width=500px ></li>`,
   )
   .join('');
 

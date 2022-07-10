@@ -5,7 +5,7 @@ console.log(text);
 
 document
   .getElementById('font-size-control')
-  .addEventListener('change', function () {
+  .addEventListener('input', function () {
     console.log(Number(this.value));
 
     text.style.fontSize = Number(this.value) + 'px';
