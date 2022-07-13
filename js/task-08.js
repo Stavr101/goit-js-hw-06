@@ -13,11 +13,11 @@ function onFormSubmit(event) {
     email,
     password,
   };
-  console.log(formDataElements);
 
-  if (email.length === 0) {
+  if (email.length === 0 || password.length === 0) {
     alert('Все поля должны быть заполнены');
-  } else if (password.length === 0) {
-    alert('Все поля должны быть заполнены');
+  } else {
+    console.log(formDataElements);
+    form.reset();
   }
 }
